@@ -1,5 +1,47 @@
-ChatGPT-Prompt-Conversation-Toolkit/
-├── README.md
-├── LICENSE
-├── .gitignore
-└── pyproject.toml   ← 这里
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chatgpt-prompt-conversation-toolkit"
+version = "0.1.0"
+description = "A lightweight open-source toolkit for managing prompts and conversations with OpenAI models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "liangyumuc-tech" }
+]
+keywords = [
+    "openai",
+    "chatgpt",
+    "llm",
+    "prompts",
+    "conversation",
+    "ai"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+    "openai>=1.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/liangyumuc-tech/ChatGPT-Prompt-Conversation-Toolkit"
+Repository = "https://github.com/liangyumuc-tech/ChatGPT-Prompt-Conversation-Toolkit"
+Issues = "https://github.com/liangyumuc-tech/ChatGPT-Prompt-Conversation-Toolkit/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chatgpt_toolkit"]
